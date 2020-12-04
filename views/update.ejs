@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<!-- Styling section -->
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body{
+background-color:#ff8c69;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: blue;
+  color: white;
+}
+</style>
+<div class="homebutton"
+<center> <a href='./'>Home</a> </center>
+</div>
+
+
+<!--  Functionality:
+1) To show live table with recipes from DB 
+2) To enable user to enter name of recipe to be updated
+3) Enable the user to submit and update 
+4) Enable the user to enter new recipe details
+5) Live update of table 
+-->
+
+
+<title> Update </title>
+<h1> Update page </h1>
+<h3> The table below shows all recipes in the database at the moment </h3>
+<table border="1">
+<tr> 
+<th>Recipe Name</th>
+<th>Recipe Owner</th>
+<th>Recipe Details</th>
+<th>Preparation Time (Minutes)</th>
+<th>Difficulty</th>
+</tr>
+<%recipe.forEach(function(item){ %>
+<tr>
+<td><%= item.recipename %></td>
+<td><%= item.recipeowner %></td>
+<td><%= item.recipedetails %></td>
+<td><%= item.preptime %></td>
+<td><%= item.difficulty %></td>
+</tr>
+<% }) %>
+</table>
+<h3> Instructions </h3>
+<form method="POST" action="/recipeUpdated">
+<p>1). Enter the full name of the recipe you wish to update, this is required </p>
+<p>2). Make sure you spell the name correctly</p>
+<p>3). Keep the same spacing and capital letters present in the recipe you want to update</p>
+<p>4). You <b> are </b> required to update <b> all the fields. </b></p>
+<p>5). If you are happy with previous data, please insert the same again </p>
+<p> 6). The table showing recipes will update automatically as soon as you submit the form </p>
+Enter Recipe to be updated
+<input type="text" name="updatename" placeholder="Name of recipe to be updated" required><br/>
+<br>
+New Details
+<input type="text" name="newname" placeholder="New name" required><br/>
+<input type="text" name="updateowner" placeholder="Update Owner"required><br/>
+<input type="text" name="updatedetails" placeholder="Update Recipe Details"required><br/>
+<input type="number" min="0" step="any" name="updatetime" placeholder="Update Time" required>
+<p> Update Difficulty </p>
+ <input type="radio" name="updatedifficulty" value="Easy">
+  <label for="Easy">Easy</label><br>
+  <input type="radio" name="updatedifficulty" value="Medium">
+  <label for="Medium">Medium</label><br>
+  <input type="radio" name="updatedifficulty" value="Hard">
+  <label for="Hard">Hard</label>
+<br>
+<input type="submit" name="submit" value="Submit">
+</form>
+</html>

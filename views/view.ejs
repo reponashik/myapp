@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<div class="homebutton"
+<center> <a href='./'>Home</a> </center>
+</div>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: blue;
+  color: white;
+}
+
+body{
+background-color: salmon;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+<title>Delete</title>
+<h2>Delete Page</h2>
+<p><b>Deleting a recipe is very simple.</b> <br> Simply click Delete
+as the Action of the recipe row to be deleted from the Database </p>
+<table border="1">
+<tr> 
+<th>Recipe Name</th>
+<th>Recipe Owner</th>
+<th>Recipe Details</th>
+<th>Preparation Time (Minutes)</th>
+<th>Difficulty</th>
+<th>Actions</th>
+</tr>
+<%recipe.forEach(function(item){ %>
+<tr>
+<td><%= item.recipename %></td>
+<td><%= item.recipeowner %></td>
+<td><%= item.recipedetails %></td>
+<td><%= item.preptime %></td>
+<td><%= item.difficulty %></td>
+<td>
+<a href="/delete/<%= item._id %>">Delete</a>
+</td>
+</tr>
+<% }) %>
+</table>
+</html>

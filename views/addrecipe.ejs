@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<!-- Styling section -->
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: cyan;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<div class="homebutton"
+<center> <a href='./'>Home</a> </center>
+</div>
+
+<!--
+Funcionality of this page:
+1)Styling on the form 
+2)Retrieve 5 pieces of data that make up a recipe
+3)Send data to POST request to deal with via submit button
+
+                    -->
+<h2>Add recipe page</h2>
+<p> Please fill up this form to add your new recipe </p>
+<div>
+<form method="POST">
+<input type="text" name="recipename" placeholder="Recipe Name" required><br/>
+<input type="text" name="recipeowner" placeholder="Recipe Owner" required><br/>
+<input type="text" name="recipedetails" placeholder="Recipe Details"required><br/>
+<input type="number" min="0" step="any" name="preptime" placeholder="Minutes to prepare" required> 
+<p> Select appropriate difficulty </p>
+ <input type="radio" name="difficulty" value="Easy">
+  <label for="Easy">Easy</label><br>
+  <input type="radio" name="difficulty" value="Medium">
+  <label for="Medium">Medium</label><br>
+  <input type="radio" name="difficulty" value="Hard">
+  <label for="Hard">Hard</label>
+<br>
+<input type="submit" name="submit" value="Submit"> 
+</form>
+</div>
+</html>

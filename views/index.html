@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<!-- Styling section -->
+<style>
+html, body, h1, h2, h3, h4, h5, h6 {
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-color: white;
+}
+div.slide-left{
+width: 100%;
+overflow:hidden;
+font-color: white;}
+div.slide-left p{
+animation: slide-left 10s;
+font-color: white;
+}
+@keyframes slide-left{
+from{
+margin-left: 100%;
+width: 300%;
+}
+to{
+margin-left:0%;
+width: 100%;
+}
+}
+div.h1div{
+background-color: red;
+}
+
+body{
+background-color: white;
+background-image:url("");
+background-repeat: repeat-y;
+background-repeat: repeat-x;
+}
+
+.buttonindex {
+  background-color:#FFD700;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-b;
+}
+
+</style>
+<title> Final Coursework </title>
+</head>
+<div class="h1div">
+<h1>Recipe Bank </h1>
+</div>
+<body>
+
+<div class="wsb-htmlsnippet-element"><p><marquee behavior="alternate" direction="left"><strong><font face="verdana" color="black"> Recipe Application <font face="verdana" color="black"> Ashik Repon - Final Coursework <font face="verdana" color="red"><p></font></font></font></strong></marquee></div>
+</body>
+
+<br>
+<!-- This is the main menu of the Recipe Bank App, this page contains all the routes redirecting to the functionalities -->
+<div class="buttonindex">
+<center> <p> Select an option </center> </p>
+<form action="/login">
+<input type="submit" value="Login">
+</form>
+<form action="/register">
+<input type="submit" value="Register">
+</form>
+<form action="/addrecipe">
+<input type="submit" value="Add Recipe">
+</form>
+<form action="/erase">
+<input type="submit" value="Delete Recipe">
+</form>
+<form action="/update">
+<input type="submit" value="Update Recipe">
+</form>
+<form action="/list">
+<input type="submit" value="List">
+</form>
+<form action="/search">
+<input type="submit" value="Search">
+</form>
+
+<form action="/api">
+<input type="submit" value="API">
+</form>
+<form action="/logout">
+<input type="submit" value="Logout">
+</form>
+</html>
+
+

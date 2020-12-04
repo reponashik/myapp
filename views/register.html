@@ -1,0 +1,128 @@
+
+<html>
+<style>
+.form-style{
+        font: 95% Arial, Helvetica, sans-serif;
+        max-width: 400px;
+        margin: 10px auto;
+        padding: 16px;
+        background: #F7F7F7;
+}
+.form-style h1{
+        background: #FFD700;
+        padding: 20px 0;
+        font-size: 140%;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+        margin: -16px -16px 16px -16px;
+}
+.form-style input[type="text"],
+.form-style input[type="email"],
+.form-style input[type="password"],
+
+.form-style textarea,
+.form-style select
+{
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 4%;
+        border: 1px solid #ccc;
+        padding: 3%;
+        color: #555;
+        font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="password"]:focus,
+
+
+{
+        box-shadow: 0 0 5px #43D1AF;
+        padding: 3%;
+        border: 1px solid #43D1AF;
+}
+
+.form-style input[type="submit"],
+.form-style input[type="button"]{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        padding: 3%;
+        background: #FF4500;
+        border-bottom: 2px solid #30C29E;
+        border-top-style: none;
+        border-right-style: none;
+        border-left-style: none;        
+        color: #fff;
+}
+.form-style input[type="submit"]:hover,
+.form-style input[type="button"]:hover{
+        background: #FF4500;
+}
+
+body{
+background-color: white;
+background-repeat: repeat-y;
+background-repeat: repeat-x;
+}
+.homebutton{
+font-color:white;
+font:white;
+background-color:white;
+margin:50;
+display:center;
+}
+
+</style>
+<!-- This form takes the username and the password from the user
+as text elements and compares them against database in the POST request to which the data in transferred to -->
+
+<div class="homebutton">
+<center> <a href='./'>Home</a> </center>
+</div>
+<div class="form-style">
+<form method = "POST" action="/registered">
+ <h1> This is the register page </h1>
+ <p> Please fill this form to register </p>
+Username
+ <p> The minimum lenght for username is length 4 </p>
+ <input id="username" type="text" name="username" placeholder="username" required> 
+<br>
+<br>
+Password
+<p> The minimum lenght for password is length 4 </p> 
+ <input id="password" type="password" name="password" required>
+<br>
+<input type="checkbox" onclick="showPass()">Show Password
+
+<script>
+function showPass() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<br>
+<br>
+Email 
+<p> Make sure your e-mail follows a correct format </p>
+<input id="email" type="email" name="email" placeholder="email" required>
+<br>
+<br>
+ <input type="submit" value="Submit Form" />
+</form>
+</div>
+</html>

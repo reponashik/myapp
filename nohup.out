@@ -1,0 +1,10 @@
+Example app listening on port ${port}!
+Connected to database
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1
+ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect decimal value: '£20.50' for column 'price' at row 1

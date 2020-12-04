@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<style>
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+ul li {
+  background: #cce5ff;
+  margin: 5px;
+}
+
+body{
+background-color: salmon;
+background-repeat: repeat-y;
+background-repeat: repeat-x;
+}
+</style>
+
+ <head> 
+  <title>List </title>
+</head>
+<h1><font color="black">Recipe Bank List</font> </h1>
+ <body>
+ <h3><font color="black"> Here are all the details about the recipes present in our Recipe Bank:</font> <ul> 
+<% availablerec.forEach(function(rec){ %>
+<li> <%= rec.recipename %>, Owner:<%= rec.recipeowner %>, Ingradients: <%= rec.recipedetails %>, Preparation Time (Minutes): <%= rec.preptime %>, Difficulty: <%= rec.difficulty %> </li>
+<% }) %>
+</ul>
+</body>
+<a href='./'>Home</a>
+</html>
+
